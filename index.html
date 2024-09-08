@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Resume Builder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="form-container">
+        <h1 style="text-align: center;">Resume Builder By Syeda Munama</h1>
+        <br>
+        <form id="resumeForm">
+            <h2>Personal Information</h2>
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required>
+        
+            <h2>Education</h2>
+            <div id="educationSection">
+                <div class="education-entry">
+                    <label for="school">School:</label>
+                    <input type="text" id="school" name="school[]" required>
+
+                    <label for="degree">Degree:</label>
+                    <input type="text" id="degree" name="degree[]" required>
+
+                    <label for="years">Years Attended:</label>
+                    <input type="text" id="years" name="years[]" required>
+                </div>
+            </div>
+            <button type="button" id="addEducation">Add Another Education Entry</button>
+
+            <h2>Work Experience</h2>
+            <div id="workExperienceSection">
+                <div class="work-experience-entry">
+                    <label for="company">Company:</label>
+                    <input type="text" id="company" name="company[]" required>
+
+                    <label for="role">Role:</label>
+                    <input type="text" id="role" name="role[]" required>
+
+                    <label for="duration">Duration:</label>
+                    <input type="text" id="duration" name="duration[]" required>
+
+                    <label for="description">Description:</label>
+                    <textarea id="description" name="description[]" required></textarea>
+                </div>
+            </div>
+            <button type="button" id="addWorkExperience">Add Another Work Experience Entry</button>
+
+            <h2>Skills</h2>
+            <div id="skillsSection">
+                <div class="skill-entry">
+                    <label for="skill">Skill:</label>
+                    <input type="text" id="skill" name="skill[]" required>
+                </div>
+            </div>
+            <button type="button" id="addSkill">Add Another Skill</button>
+            <br>
+            <button type="submit">Generate Resume</button>
+        </form>
+    </div>
+
+    <div id="resumeContainer" class="resume-container">
+        <!-- The dynamically generated resume will be inserted here -->
+    </div>
+
+    <br>
+     
+    <div style="display: flex; justify-content: center; margin-top: 20px;">
+
+
+    <button id="downloadBtn">Download Resume as PDF</button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+    <script src="app.js"></script>
+
+    <script>
+        document.getElementById('downloadBtn').addEventListener('click', function () {
+            
+            const element = document.getElementById('resumeContainer');
+            
+            
+            html2pdf()
+                .from(element)
+                .save('resume.pdf');
+        });
+    </script>
+    </div>
+</body>
+</html>
+

@@ -1,0 +1,200 @@
+/* Global Styles */
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f5f7fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Form and Resume Containers */
+.form-container, .resume-container {
+    background: #ffffff;
+    padding: 30px;
+    margin: 20px auto;
+    max-width: 900px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.form-container:hover, .resume-container:hover {
+    transform: scale(1.02);
+}
+
+h1, h2, h3 {
+    color: #444;
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+input[type="text"], input[type="email"], input[type="tel"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px 0;
+    background-color: #9c63ff;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #8950ce;
+}
+
+/* Resume Styles */
+.resume-container {
+    display: none;
+    margin-top: 30px;
+}
+
+.resume-container.show {
+    display: block;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Personal Info */
+.personal-info {
+    background-color: #9f63ff;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.personal-info h1 {
+    margin-bottom: 10px;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.personal-info p {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+/* Dropdown Headers */
+.dropdown-header {
+    font-size: 22px;
+    color: #9c63ff;
+    margin: 0;
+    padding: 15px;
+    cursor: pointer;
+    background-color: #eaeaf2;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.dropdown-header:hover {
+    background-color: #ddd;
+}
+
+/* Dropdown Content */
+.dropdown-content {
+    padding: 20px;
+    background-color: #f9f9fb;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    display: none; /* Hidden by default */
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul li {
+    font-size: 16px;
+    margin: 8px 0;
+}
+
+ul ul {
+    margin-top: 5px;
+    font-size: 15px;
+    color: #555;
+}
+
+/* Personal Info Section */
+section.personal-info {
+    border-radius: 8px;
+    padding: 15px;
+    background-color: #9c63ff;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Hover Effects for Buttons */
+button:hover {
+    background-color: #844dbf;
+}
+
+/* Styling for Education, Work Experience, Skills Sections */
+.dropdown-section {
+    margin-bottom: 20px;
+}
+
+.dropdown-section .dropdown-header {
+    background-color: #f1f2f6;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 5px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.dropdown-section .dropdown-content {
+    background-color: #f7f7f9;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+.dropdown-content ul {
+    padding-left: 15px;
+}
+
+.dropdown-content ul li {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+/* Initially hide the content */
+.dropdown-content {
+    display: none;
+}
+
+/* Show content when the 'show' class is applied */
+.dropdown-content.show {
+    display: block;
+}
